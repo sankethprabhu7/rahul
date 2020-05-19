@@ -1,0 +1,56 @@
+1 Motivation
+1.1 Current situation:
+•	All the payments done by Vendor is associated with some payment term.
+•	Payment term defines the invoice payment due date as per baseline date.
+•	There are different kind of payment terms for which a Vendor is eligible. 
+•	Detection of anomaly is currently done by Fraud Management Team manually.
+•	For different modules help of different Subject Matter Experts are required.
+•	Auditing of data is done at different levels by visualizing them.
+•	There is an existing solution in SAP which checks for certain features and gives us the duplicate invoice only if it is an exact match.
+•	System will not allow the user to enter any duplicate invoice in a typical scenario
+•	Invoice comes with a Reference number which act as the unique identifier for any posting. Same Reference No. can occur for different Vendor ID’s or for different sets of amount.
+•	Posting date is filled manually so there is no restriction.
+1.2 Concerns or pain areas:
+•	If any unusual payments are posted then it cannot be detected easily in large dataset. 
+•	Every data has to be manually checked resulting in some fraudulent transactions getting missed.
+•	There is less transparency in checking which may lead to give some false results.
+•	Since lots of manual work is needed it is prone to errors.
+•	The process is very time consuming and resource intensive.
+•	The company incurs huge losses due to fraudulent transactions.
+•	Even if there is a slight difference between two invoices SAP will not catch it.
+•	If two Vendors are posting same amount at a particular date with similar Reference number then it won’t be caught.
+2	Capabilities
+2.1 Roles 
+
+The following roles are supported in the application.
+Role	Actions	Responsibility
+Business Manager	•	Handling Investigation
+•	Closing of alerts	If no further analysis is needed close the alerts. If Any investigation is created take the necessary actions.
+Business Analyst	•	Alert/Notification Handling
+•	Creating Investigation
+•	Analytical Reports	View the alerts and try to find the anomalies. Forward the alerts to other suitable analysts. Add attachments and notes. Create investigations if need be.
+Data Analyst	•	Run Algorithm
+•	Manage Data
+•	Alert/Notification Generation	Run the algorithm on the required data with the suitable parameters. Once completed create alerts for the data.
+
+
+
+
+
+
+
+2.2	Functionality
+
+2.2.1	Component Brief
+
+Users of Fraud Detection will have access to the following components. 
+
+Payment Anomaly	Fraud detection in payment transaction.
+Unusual payment terms used by vendor in transaction is called payment term anomaly
+Duplicate Invoice	Fraud detection Duplicate invoice.
+Duplicate Invoice postings happen when a single invoice received from vender is posted in the system more than once and consequently paid more than once
+Alerts	The alerts are created automatically or manually and require action from the recipient either in this application 
+Alert Report	Report which gives the details of all the alerts that is generated 
+This screen allows the user to view all the alerts and its details in one place.
+Event Details	Event details page will give timeline of operation done for the given alert such as Notes created forwarded etc.
+
